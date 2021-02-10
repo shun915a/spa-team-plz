@@ -14,8 +14,8 @@
   4.times do |m|
     user.friends.build(
       title: "募集タイトル_#{m}",
-      game_id: "Gamer#000#{m}",
-      text: '一緒にゲームをするフレンド募集中！楽しくプレイできる方！'
+      game_id: "Gamer#000#{n}",
+      text: "募集文_#{m} 一緒にゲームをするフレンド募集中！楽しくプレイできる方！"
     )
   end
 

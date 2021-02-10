@@ -9,7 +9,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
 
       t.string :nickname, null: false
       t.integer :gender_id
-      t.date :birtthday
+      t.date :birthday
       t.text :profile
       t.string :twitter_name
       t.string :twitch_name

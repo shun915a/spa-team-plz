@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_02_10_003141) do
     t.string "encrypted_password", default: "", null: false
     t.string "nickname", null: false
     t.integer "gender_id"
-    t.date "birtthday"
+    t.date "birthday"
     t.text "profile"
     t.string "twitter_name"
     t.string "twitch_name"
