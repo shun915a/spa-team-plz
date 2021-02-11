@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 
-export const Recruitments = () => {
+export const Posts = () => {
   return (
     <Fragment>
-      募集一覧
+      全体募集一覧
     </Fragment>
   )
 }

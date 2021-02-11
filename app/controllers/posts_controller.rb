@@ -1,4 +1,4 @@
-class RecruitmentsController < ApplicationController
+class PostsController < ApplicationController
   def index
     render json: {
 

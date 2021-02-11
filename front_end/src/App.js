@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 // components
-import { Recruitments } from './containers/Recruitments'
+import { Posts } from './containers/Posts'
 import { Friends } from './containers/Friends.jsx'
 
 function App() {
@@ -17,14 +17,14 @@ function App() {
         {/* 全募集一覧ページ */}
         <Route
           exact
-          path="/recruitments"
+          path="/posts"
         >
-          <Recruitments />
+          <Posts />
         </Route>
         {/* フレンド募集一覧ページ */}
         <Route
           exact
-          path="/foods"
+          path="/friends"
         >
           <Friends />
         </Route>
