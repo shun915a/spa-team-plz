@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class ::Users::RegistrationsController < Devise::RegistrationsController
+  respond_to :json
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
@@ -10,9 +11,22 @@ class ::Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super do
+      if request.format.json?
+        render json: {
+          'status' => 'ok',
+          'csrf_token' => form_authenticity_token,
+          'result' => {
+            'user' => {
+              'id' => @user.id,
+              'email' => @user.email
+            }
+          }
+        } and return
+      end
+    end
+  end
 
   # GET /resource/edit
   # def edit
