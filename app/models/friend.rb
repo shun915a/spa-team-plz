@@ -6,6 +6,4 @@ class Friend < ApplicationRecord
     validates :game_id
     validates :text
   end
-
-  scope :active, -> { where(active: true) }
 end

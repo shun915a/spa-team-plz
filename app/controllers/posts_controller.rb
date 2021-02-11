@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
   def index
-    render json: {
+    friends = Friend.all
 
+    render json: {
+      friends: friends
     }, status: :ok
   end
 end
