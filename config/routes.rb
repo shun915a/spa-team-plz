@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       devise_for :users
       resources :recruitments, only: %i[index]
-      resources :foods
+      resources :friends
     end
   end
 end
